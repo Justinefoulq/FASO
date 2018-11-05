@@ -1,1 +1,7 @@
 
+def AllumerAlarm() :
+  
+  
+def EteindreAlarm():
+  
+  

@@ -7,11 +7,11 @@ def PersonneDetecte():
   return Poids.PoidsDetect()> ( 5+ poidPlanche)
 
 def LancerAlarm():
-  if PersonneDetecte() && !(RFID.BadgeDetecte):
+  if PersonneDetecte() and !(RFID.BadgeDetecte):
     HautParleur.AllumerAlarm()
     
 def ArreterAlarm():
-  if !(PersonneDetecte()) || (RFID.BadgeDetecte):
+  if !(PersonneDetecte()) or (RFID.BadgeDetecte):
     HautParleur.EteindreAlarm()
   
   

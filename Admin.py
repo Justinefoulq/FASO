@@ -1,1 +1,3 @@
 
+def creerAdmin
+def suprAdmin

@@ -1,17 +1,22 @@
 import Poids
 import RFID
-import HautParleur
 
 def PersonneDetecte():
   poidPlanche=4
   return Poids.PoidsDetect()> ( 5+ poidPlanche)
 
 def LancerAlarm():
-  if PersonneDetecte() and !(RFID.BadgeDetecte):
-    HautParleur.AllumerAlarm()
-    
-def ArreterAlarm():
-  if !(PersonneDetecte()) or (RFID.BadgeDetecte):
-    HautParleur.EteindreAlarm()
-  
-  
+	while True:
+		while PersonneDetecte() and not(BadgeDetecte()):
+			try:
+				grovepi.digitalWrite(buzzer,1)
+				print('start')
+				time.sleep(0.5)
+				grovepi.digitalWrite(buzzer,0)
+				print('stop')
+				time.sleep(0.5)
+			except KeyboardInterrupt:
+				grovepi.digitalWrite(buzzer,0)
+				break
+		grovepi.digitalWrite(buzzer,0)
+

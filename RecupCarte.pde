@@ -12,7 +12,6 @@ Adafruit_PN532 nfc(PN532_IRQ, PN532_RESET);
 
 void setup(void) {
   Serial.begin(9600);
-  
   nfc.begin();
 
   uint32_t versiondata = nfc.getFirmwareVersion();
@@ -24,8 +23,6 @@ void setup(void) {
   // configure board to read RFID tags
   nfc.SAMConfig();
 }
-
-
 
 void loop(void) {
   uint8_t success;

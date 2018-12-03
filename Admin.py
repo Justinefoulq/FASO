@@ -1,3 +1,6 @@
 
-def creerAdmin
-def suprAdmin
+def creerAdmin ()
+def suprAdmin ()
+
+
+

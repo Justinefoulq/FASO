@@ -3,6 +3,8 @@ import pickle
 
 ser = serial.Serial('/dev/ttyACM0',9600)
 
+
+  
 def creerAdmin (admin):
   deja=False
   Codecarte=ser.readline()
@@ -49,5 +51,8 @@ def QueFaire():
   Fichier=open('ListeAdmin.txt','wb')
   pickle.dump(admin,Fichier)
   Fichier.close
-   
+  
+
+  
 QueFaire()  
+

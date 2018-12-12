@@ -1,22 +1,76 @@
-#import Poids.py
-import RFID.py
+#import RFID.py
+from grovepi import *
+import time
 
-def PersonneDetecte():
-  poidPlanche=4
-  return Poids.PoidsDetect()> ( 5+ poidPlanche)
+ultrasonic_ranger1 = 4
+ultrasonic_ranger2 = 2
+ultrasonic_ranger3 = 3
+buzzer = 8
+led = 6
 
-def LancerAlarm():
-  while True:
-    #while PersonneDetecte() and not(BadgeDetecte()):
-    while not(RFID.BadgeDectecte())
+def AllumerLed() :
+  #pinMode(led,"OUTPUT") 
+  try:
+      #Blink the LED
+      digitalWrite(led,1)     # Send HIGH to switch on LED
+      print ("LED ON!")
+      time.sleep(0.5)
+
+      digitalWrite(led,0)     # Send LOW to switch off LED
+      print ("LED OFF!")
+
+  except KeyboardInterrupt:   # Turn LED off before stopping
+      digitalWrite(led,0)
+  except IOError:             # Print "Error" if communication error encountered
+      print ("Error")
+
+def LancerAlarme():
     try:
-      grovepi.digitalWrite(buzzer,1)
+      digitalWrite(buzzer,1)
       print('start')
       time.sleep(0.5)
-      grovepi.digitalWrite(buzzer,0)
+      digitalWrite(buzzer,0)
       print('stop')
-      time.sleep(0.5)
     except KeyboardInterrupt:
-      grovepi.digitalWrite(buzzer,0)
-      break
-    grovepi.digitalWrite(buzzer,0)
+      digitalWrite(buzzer,0)
+   
+def PersonneDetecte() :
+    while True:
+        try:
+            # Read distance value from Ultrasonic
+            ultra1=ultrasonicRead(ultrasonic_ranger1)
+
+        except TypeError:
+            print "Error"
+        except IOError:
+            print "Error"
+
+        try:
+               # Read distance value from Ultrasonic
+            ultra2=ultrasonicRead(ultrasonic_ranger2)
+
+        except TypeError:
+            print "Error"
+        except IOError:
+            print "Error"
+
+        try:
+                    # Read distance value from Ultrasonic
+            ultra3=ultrasonicRead(ultrasonic_ranger3)
+
+        except TypeError:
+            print "Error"
+        except IOError:
+            print "Error"
+
+        if ultra1<50 or ultra2<50 or ultra3<50 :
+          #LancerAlarme()
+          #AllumerLed()
+          digitalWrite(buzzer,1)
+          digitalWrite(led,1)
+          time.sleep(0.7)
+          digitalWrite(buzzer,0)
+          digitalWrite(led,0)
+        
+
+PersonneDetecte()

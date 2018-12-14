@@ -1,4 +1,4 @@
-#import RFID.py
+import RFID
 from grovepi import *
 import time
 
@@ -8,34 +8,9 @@ ultrasonic_ranger3 = 3
 buzzer = 8
 led = 6
 
-def AllumerLed() :
-  #pinMode(led,"OUTPUT") 
-  try:
-      #Blink the LED
-      digitalWrite(led,1)     # Send HIGH to switch on LED
-      print ("LED ON!")
-      time.sleep(0.5)
-
-      digitalWrite(led,0)     # Send LOW to switch off LED
-      print ("LED OFF!")
-
-  except KeyboardInterrupt:   # Turn LED off before stopping
-      digitalWrite(led,0)
-  except IOError:             # Print "Error" if communication error encountered
-      print ("Error")
-
-def LancerAlarme():
-    try:
-      digitalWrite(buzzer,1)
-      print('start')
-      time.sleep(0.5)
-      digitalWrite(buzzer,0)
-      print('stop')
-    except KeyboardInterrupt:
-      digitalWrite(buzzer,0)
    
 def PersonneDetecte() :
-    while True:
+    while not(RFID.BadgeDetecte()):
         try:
             # Read distance value from Ultrasonic
             ultra1=ultrasonicRead(ultrasonic_ranger1)
@@ -44,6 +19,7 @@ def PersonneDetecte() :
             print "Error"
         except IOError:
             print "Error"
+        
 
         try:
                # Read distance value from Ultrasonic
@@ -68,9 +44,12 @@ def PersonneDetecte() :
           #AllumerLed()
           digitalWrite(buzzer,1)
           digitalWrite(led,1)
-          time.sleep(0.7)
+          time.sleep(1)
           digitalWrite(buzzer,0)
           digitalWrite(led,0)
-        
 
-PersonneDetecte()
+while True:
+  PersonneDetecte()
+  time.sleep(10)
+
+

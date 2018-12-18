@@ -1,6 +1,8 @@
 import RFID
 from grovepi import *
 import time
+import mail
+import donnee
 
 ultrasonic_ranger1 = 4
 ultrasonic_ranger2 = 2
@@ -10,6 +12,9 @@ led = 6
 
    
 def PersonneDetecte() :
+    cmp=0
+    bipmtn=False
+    bipprec=False
     while not(RFID.BadgeDetecte()):
         try:
             # Read distance value from Ultrasonic
@@ -47,9 +52,20 @@ def PersonneDetecte() :
           time.sleep(1)
           digitalWrite(buzzer,0)
           digitalWrite(led,0)
+          #cmp=cmp+1
+          bipmtn=True
+
+        if bipmtn and not(bipprec):
+            mail.envoieEmail()
+            donnee.stockDonneesDateIntrusion('')
+
+        bipprec=bipmtn
+        bipmtn=False
+              
+        #if cmp==10 :
+         #   mail.envoieEmail()
+          #  cmp=0
 
 while True:
   PersonneDetecte()
   time.sleep(10)
-
-

@@ -1,5 +1,6 @@
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+import time
 
 scope = ['https://spreadsheets.google.com/feeds',
          'https://www.googleapis.com/auth/drive']
@@ -11,4 +12,6 @@ gc = gspread.authorize(credentials)
 
 wks = gc.open('Protectart').sheet1
 
-wks.append_row([ 'coucou','felix'])
+date = time.strftime('%d/%m/%y',time.localtime())
+
+wks.append_row([ date,'1'])

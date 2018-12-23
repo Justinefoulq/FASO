@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "my-project-faso",
+  "private_key_id": "12400f1c27b056fa5e05a925fa2a27503818a87f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCcmW1aRcVgsCVo\nbStSUc03+xYHUoFbEyEctcKXu2Cloxg4doxvJekrCZHxdbF6hIHGQdiyzaSICXFm\nOIdVmRIyerd46wDXVtt71s71rdf5BqKJcyoyO0WiwEmZ97BpslkBZTO1MregsGKV\njRg/eyQ2XftWQ84NuXd9BZDMURtWs6btzjwuXuCGHUoKZLh/G7sZHW3wx5sigRJZ\nJTirlltNGc0l5POrobadgaZvI7AicnQZZpFWg5T69wGsiYkIMHW3WDPLwejle5mk\nFeU8fVMDnQiVAAzWSbPouCbHTGEvrjSOdsWzayZD9x685h0T6cxlqZRwY9xxPq6T\nDz7LrWBLAgMBAAECggEAQgTYuh8B+CIqkxy7D8hWuQwMnGenCytEYWMrN2aSdyIL\n+vnXeKBF7ZPqSB5zBRDJ2Tg3UCIsBAHfIdYhD/ApYMilgr+oKiB/BXVo6OAyVdT7\nPvEjT+v3Dob8QIHQiK7coR72LqTED2VtGllSaKjUemsio5qQSu7utfFbuxdSbDlF\n0WYX2Lh0Zi6m4dDATIaZL4CJOCuJ+CvQ+FfajshcfNIsplPIu9rPi8jqISpRNRWd\nCZFHkRlyuDtAxYwQCH4xTsYO9OvfJKYHgxYjo/0AgUjWYJ1WLgk7fwMjVkoMhoRd\nJhJMrg5QY9waVtx4eOtHEOODZ+Bn12bgthiS+RbdYQKBgQDS16ZK4REGWQScgM1o\nRsGST8t+2jA9wbeyoQhZHVubT8rbaFmf+EgG/1wRW8mBHLCa5TcmHVGLZiGc/oAN\ni8PmZwOh/dWudG6To03BOaQCSASUtFyBtoCmZdhr0xALnyvseCuY8iJI/CgMhewR\n2ZqsU9oZT/8wjtL3NXavl/7eMQKBgQC+I6qHsa9j8NwumBOetOk0afE4zuyDuy8e\nUifMYQ0RYuZb2uANIK3/3wB+KTSsR+DeX1UStvLKvFCNTVxsQejXbbCSCUVMVCZY\nTJ1rXVJgHs8FY9VgOulKz3LPQqWoiG4o5RuIhLvbHrhzsIGnCPGzOYbfbr7BJD8S\nzI71pVEbOwKBgQDChMBfzts1HwV5Gf/n13eY89NLeiMNpt5Ch/y6srIkTO5blB8z\nzg0tn4QiY6s5We25SgWiPWRRFm2meMpNNQgMVjfsyNHOPI8T2JLQ1Mvyat0HEItU\nBLsWSVnsyHHCNxx/8rJOTf3BlhmgzCFqqnbfzBCoT7yg4PPTrNiN0c4K0QKBgGjn\nSKjBEeFz/CcA5KJFcfznDp2nHLq5RY/XB/os+YbEKBA5vC/B/f4TzTPODC+ZIKnP\nsyI2KdJM/6xWKE3aN1rUO/z2fHNWYimJa7jWriI2HUX+BLWpCxmpRtCvFrLbQtvx\nO7Wgdfy5AE9j7MR5nNCjRpRzh28MTnhSv/UrlooNAoGAQpMhiv2Eeg3sLERurKTH\ngeKg3QjhBldVJonCBqzmLn7OYFConFNSkN0/nuXRY9VKlsan+w0vAvZKc+NKzvBK\naEf3bD1mQDpNTHhL6SqnYZcGj+xxCvcNR7LoGHJajeeEeVVYDr2C6mlfVS040AM7\nzAfOJYxnmJVKLUWSDx9AqUE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "projetfaso@my-project-faso.iam.gserviceaccount.com",
+  "client_id": "102554452844322146108",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/projetfaso%40my-project-faso.iam.gserviceaccount.com"
+}
